@@ -1,0 +1,21 @@
+<h2> Censor Classified Documents </h2>
+
+<!-- Table starts here -->
+<table id="table">
+  <thead>
+  <tr>
+    <th style="text-align:center">Document to Censor</th>
+    <th> Delete </th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let document of documents">
+    <td>{{document.documentToCensor}}</td>
+    <td> <button type="button" (click)="deleteDocument(document); $event.stopPropagation();">Delete</button></td>
+
+  </tr>
+  </tbody>
+</table>
+
+<app-censor-document (censorDocument)='onCensorDocument($event)'> </app-censor-document>

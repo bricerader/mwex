@@ -1,0 +1,15 @@
+<div class="form-group">
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="censor">Censor</label>
+      <input type="text" class="form-control" [(ngModel)]="newDocument.censor" name="censor" required>
+    </div>
+
+    <div>
+      <label for="documentToCensor">Document to Censor</label>
+      <input type="text" class="form-control" [(ngModel)]="newDocument.documentToCensor" name="documentToCensor" required>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
